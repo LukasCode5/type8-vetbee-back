@@ -1,10 +1,8 @@
-GET http://127.0.0.1:3000/
+POST http://127.0.0.1:3000/api/medications/createTable
+###
+GET  http://127.0.0.1:3000/api/medications
+###
+POST  http://127.0.0.1:3000/api/medications/insert
 ###
 
-GET http://localhost:8080/
-###
-GET http://localhost:8080/api/pets/createtable
-###
 
-GET http://localhost:8080/api/pets/insertInto
-###
