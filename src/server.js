@@ -5,13 +5,13 @@ const { PORT } = require('./config');
 
 const app = express();
 
-// route imports
-const { petsRoutes } = require('./routes/petsRoutes');
-
 // Global Middleware
 app.use(cors());
 app.use(morgan('dev'));
 app.use(express.json());
+
+// route imports
+const { petsRoutes } = require('./routes/petsRoutes');
 
 // routes
 app.use('/api/pets', petsRoutes);
