@@ -36,6 +36,12 @@ medicationRoutes.post('/createTable', async (req, res) => {
 });
 
 medicationRoutes.post('/insert', async (req, res) => {
+  const { name, description } = req.body;
+  if (!name || !description) {
+    console.log('all good');
+    res.json('all fields required');
+    return;
+  }
   let connection;
   try {
     connection = await mysql.createConnection(dbConfig);
