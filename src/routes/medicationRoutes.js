@@ -45,9 +45,8 @@ medicationRoutes.post('/insert', async (req, res) => {
   let connection;
   try {
     connection = await mysql.createConnection(dbConfig);
-    const query =
-      'INSERT INTO medications(name, description) VALUES("Huberium", "medication for huberium")';
-    const [data] = await connection.query(query);
+    const query = 'INSERT INTO medications(name, description) VALUES(?, ?)';
+    const [data] = await connection.execute(query, [name, description]);
     res.json(data);
   } catch (error) {
     console.log('error === in post create table', error);
