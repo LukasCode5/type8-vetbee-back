@@ -1,5 +1,6 @@
-GET http://127.0.0.1:3000/
+POST http://127.0.0.1:3000/api/medications/createTable
 ###
+
 
 GET http://localhost:8080/
 ###
@@ -14,4 +15,17 @@ Content-Type: application/json
     "dob": "2003-05-15",
     "clientEmail": "augintiniai@email.lt"
 }
+=======
+GET  http://127.0.0.1:3000/api/medications
+###
+POST  http://127.0.0.1:3000/api/medications/insert
+Content-Type: application/json
+
+{
+"name":"Allergy shot",
+"description":"injection to prevent allergies"
+}
+
+###
+
 
