@@ -28,4 +28,14 @@ Content-Type: application/json
 
 ###
 
+POST http://localhost:8080/api/prescriptions
+Content-Type: application/json
 
+{
+    "medicationId": 1, 
+    "petId": 5,
+    "comment": "get healthy"
+}
+
+### 
+GET http://localhost:8080/api/prescriptions/5
