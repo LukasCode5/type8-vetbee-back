@@ -1,6 +1,25 @@
 POST http://127.0.0.1:3000/api/logs/createTable
 ###
+
 GET  http://127.0.0.1:3000/api/logs/1
+=======
+
+
+GET http://localhost:8080/
+###
+GET http://localhost:8080/api/pets/
+
+###
+POST http://localhost:8080/api/pets
+Content-Type: application/json
+
+{
+    "name": "JonasABUDABIS",
+    "dob": "2003-05-15",
+    "clientEmail": "augintiniai@email.lt"
+}
+=======
+GET  http://127.0.0.1:3000/api/medications
 ###
 POST  http://127.0.0.1:3000/api/logs/insert
 Content-Type: application/json
