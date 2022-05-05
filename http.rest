@@ -1,13 +1,14 @@
-POST http://127.0.0.1:3000/api/medications/createTable
+POST http://127.0.0.1:3000/api/logs/createTable
 ###
-GET  http://127.0.0.1:3000/api/medications
+GET  http://127.0.0.1:3000/api/logs/1
 ###
-POST  http://127.0.0.1:3000/api/medications/insert
+POST  http://127.0.0.1:3000/api/logs/insert
 Content-Type: application/json
 
 {
-"name":"Allergy shot",
-"description":"injection to prevent allergies"
+"pet_id":2,
+"description":"Medical records of pet",
+"status":"Sick"
 }
 
 ###
