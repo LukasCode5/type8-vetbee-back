@@ -8,6 +8,7 @@ const app = express();
 // route imports
 const { petsRoutes } = require('./routes/petsRoutes');
 const medicationRoutes = require('./routes/medicationRoutes');
+const logsRoutes = require('./routes/logsRoutes');
 
 // Global Middleware
 app.use(cors());
@@ -17,6 +18,7 @@ app.use(express.json());
 // routes
 app.use('/api/pets', petsRoutes);
 app.use('/api/medications', medicationRoutes);
+app.use('/api/logs', logsRoutes);
 
 app.get('/', (req, res) => {
   res.json('Hello person');
