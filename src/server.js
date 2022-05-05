@@ -7,6 +7,7 @@ const app = express();
 
 // route imports
 const { petsRoutes } = require('./routes/petsRoutes');
+const { prescriptionsRoutes } = require('./routes/prescriptionsRoutes');
 const medicationRoutes = require('./routes/medicationRoutes');
 const logsRoutes = require('./routes/logsRoutes');
 
@@ -18,6 +19,7 @@ app.use(express.json());
 // routes
 app.use('/api/pets', petsRoutes);
 app.use('/api/medications', medicationRoutes);
+app.use('/api/prescriptions', prescriptionsRoutes);
 app.use('/api/logs', logsRoutes);
 
 app.get('/', (req, res) => {
